@@ -6,20 +6,25 @@ class Schwein
 {
 private:
 	std::string name;
-
-	
-
 	int gewicht;
-
+	
+	
 	void set_gewicht(const int gewicht)
 	{
 		this->gewicht = gewicht;
 	}
+	static int counter;
 
 public:
-
-	Schwein();
+	
+	
+	Schwein(std::string name= "Nobody");
 	~Schwein();
+
+	static int get_counter() 
+	{
+		return Schwein::counter;
+	}
 	
 	void fressen();
 
@@ -43,6 +48,19 @@ public:
 	{
 		return "Schwein: Name=" + name + ", Gewicht=" + std::to_string(gewicht);
 	}
-	
+
+	Schwein & operator ++ () 
+	{ 
+		fressen();
+		return *this;
+	}
+
+
+	friend std::ostream& operator<<(std::ostream& os, const Schwein& obj)
+	{
+		return os
+			<< "name: " << obj.name
+			<< " gewicht: " << obj.gewicht;
+	}
 };
 
