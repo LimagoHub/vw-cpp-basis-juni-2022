@@ -11,8 +11,12 @@ int main()
 
 	
 	
-	Schwein piggy{"Miss Piggy"};
+	//Schwein piggy{"Miss Piggy"};
+
+	std::string name = "Miss Piggy";
 	
+	Schwein piggy;
+	piggy = name;
 	
 	std::cout << piggy << std::endl;
 	++piggy;

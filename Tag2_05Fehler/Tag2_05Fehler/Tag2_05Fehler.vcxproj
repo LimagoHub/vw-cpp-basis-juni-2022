@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c8fe229b-042d-4ed5-939d-bcdaaa3a7b4e}</ProjectGuid>
-    <RootNamespace>Tag201Stapel</RootNamespace>
+    <ProjectGuid>{74340d92-a904-4384-8e8c-4ef395327831}</ProjectGuid>
+    <RootNamespace>Tag205Fehler</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,12 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Schwein.cpp" />
-    <ClCompile Include="Tag2_01Stapel.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Schwein.h" />
-    <ClInclude Include="Stapel.h" />
+    <ClCompile Include="Tag2_05Fehler.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
