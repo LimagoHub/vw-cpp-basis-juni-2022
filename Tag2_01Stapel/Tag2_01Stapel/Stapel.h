@@ -15,13 +15,18 @@ namespace vw
 		/// </summary>
 		class Stapel
 		{
+		private:
+			static const int array_size{ 10 };
+			int data[array_size];
+			int index;
+		
 		public:
 			/// <summary>
 			/// 
 			/// </summary>
-			Stapel()
+			Stapel():index(0)
 			{
-				std::cout << "ctor" << std::endl;
+				
 			}
 
 			/// <summary>
@@ -30,7 +35,8 @@ namespace vw
 			/// <param name="value"></param>
 			void push(const int value) // Verhalten im Fehlerfall
 			{
-				std::cout << "push" << std::endl;
+				if (!is_full())
+					data[index++] = value;
 			}
 			/// <summary>
 			/// 
@@ -38,20 +44,19 @@ namespace vw
 			/// <returns></returns>
 			int pop() // Verhalten im Fehlerfall
 			{
-				std::cout << "pop" << std::endl;
-				return 0;
+				if (is_empty())
+					return 0;
+				return data[--index];
 			}
 
 			bool is_empty()
 			{
-				std::cout << "is_empty" << std::endl;
-				return true;
+				return index <= 0;
 			}
 
 			bool is_full()
 			{
-				std::cout << "is_full" << std::endl;
-				return true;
+				return index>= array_size;
 			}
 		};
 
