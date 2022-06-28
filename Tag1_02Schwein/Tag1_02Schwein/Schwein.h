@@ -7,13 +7,13 @@ class Schwein
 private:
 	std::string name;
 	int gewicht;
-	
+	static int counter;
 	
 	void set_gewicht(const int gewicht)
 	{
 		this->gewicht = gewicht;
 	}
-	static int counter;
+	
 
 public:
 	
@@ -61,6 +61,18 @@ public:
 		return os
 			<< "name: " << obj.name
 			<< " gewicht: " << obj.gewicht;
+	}
+
+
+	friend bool operator==(const Schwein& lhs, const Schwein& rhs)
+	{
+		return lhs.name == rhs.name
+			&& lhs.gewicht == rhs.gewicht;
+	}
+
+	friend bool operator!=(const Schwein& lhs, const Schwein& rhs)
+	{
+		return !(lhs == rhs);
 	}
 };
 
