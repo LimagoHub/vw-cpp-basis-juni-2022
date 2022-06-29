@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{74ff9786-239a-44c2-b408-5493924a9099}</ProjectGuid>
-    <RootNamespace>Tag103Geometrie</RootNamespace>
+    <ProjectGuid>{ac93c531-1e0a-4a83-aec6-bb4da2045c48}</ProjectGuid>
+    <RootNamespace>Tag301Calculator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Kreis.cpp" />
-    <ClCompile Include="Punkt.cpp" />
-    <ClCompile Include="Tag1_03Geometrie.cpp" />
+    <ClCompile Include="CalculatorClient.cpp" />
+    <ClCompile Include="Tag3_01Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Kreis.h" />
-    <ClInclude Include="Punkt.h" />
+    <ClInclude Include="Calculator.h" />
+    <ClInclude Include="CalculatorClient.h" />
+    <ClInclude Include="CalculatorImpl.h" />
+    <ClInclude Include="CalculatorLogger.h" />
+    <ClInclude Include="CalculatorSecure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,9 +17,18 @@ auto foo(int a , int b)->long
 	return a *b ;
 }
 
+template<typename T, typename U>
+auto add(T a, U b) -> decltype(a + b)
+{
+	return a + b;
+}
+
+
 
 auto main() -> int
 {
+	
+	
 	auto mptr = std::make_shared<MyClass>(new MyClass);
 	
 	auto a = 10;

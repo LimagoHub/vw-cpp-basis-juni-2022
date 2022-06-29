@@ -2,20 +2,50 @@
 //
 
 #include <iostream>
+#include <stdexcept>
 #include "Punkt.h"
+#include "Kreis.h"
 
 
+//class MyException: public std::exception
+//{
+//
+//private:
+//	const char* message;
+//public:
+//	
+//
+//	MyException(const char* message, exception const& _Other)
+//		: exception(_Other), message(message)
+//	{
+//	}
+//
+//
+//	char const* what() const override
+//	{
+//		return message;
+//	}
+//};
 
 int main()
 {
-	
-	Punkt p{ 2.0 , 4.9};
-	for (int i = 0; i < 12; ++i)
-	{
-		std::cout << p << std::endl;
-		p.rechts();
-	}
 
+	/*try {
+		throw MyException{ "upps", std::exception{"inner"} };
+
+	} catch(std::exception & ex)
+	{
+		std::cout << ex.what() << std::endl;
+	}*/
+
+	
+	
+	Kreis k;
+
+	Punkt& p = k;
+
+	
+	
 	
  }
 

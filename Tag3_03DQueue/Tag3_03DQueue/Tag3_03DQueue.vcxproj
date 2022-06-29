@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{74ff9786-239a-44c2-b408-5493924a9099}</ProjectGuid>
-    <RootNamespace>Tag103Geometrie</RootNamespace>
+    <ProjectGuid>{4e052a9d-765e-4843-b26b-358af817ea6b}</ProjectGuid>
+    <RootNamespace>Tag303DQueue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Kreis.cpp" />
-    <ClCompile Include="Punkt.cpp" />
-    <ClCompile Include="Tag1_03Geometrie.cpp" />
+    <ClCompile Include="Schwein.cpp" />
+    <ClCompile Include="Tag3_03DQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Kreis.h" />
-    <ClInclude Include="Punkt.h" />
+    <ClInclude Include="linked_list_impl.h" />
+    <ClInclude Include="Liste.h" />
+    <ClInclude Include="ListeClient.h" />
+    <ClInclude Include="Schwein.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

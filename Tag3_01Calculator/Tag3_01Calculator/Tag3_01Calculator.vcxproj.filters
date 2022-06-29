@@ -13,23 +13,32 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\math">
+      <UniqueIdentifier>{b1163a97-cc7b-4561-89f9-f286f0f214ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tag1_03Geometrie.cpp">
+    <ClCompile Include="Tag3_01Calculator.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Punkt.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Kreis.cpp">
+    <ClCompile Include="CalculatorClient.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Punkt.h">
+    <ClInclude Include="CalculatorImpl.h">
+      <Filter>Headerdateien\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>Headerdateien\math</Filter>
+    </ClInclude>
+    <ClInclude Include="CalculatorClient.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Kreis.h">
+    <ClInclude Include="CalculatorLogger.h">
+      <Filter>Headerdateien\math</Filter>
+    </ClInclude>
+    <ClInclude Include="CalculatorSecure.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

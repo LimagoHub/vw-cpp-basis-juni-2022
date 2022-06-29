@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include <ostream>
 using namespace std;
@@ -27,6 +28,7 @@ private:
 public:
 	Punkt(double x = 0.0, double y = 0.0)
 	{
+		std::cout << "CTOR Punkt" << std::endl;
 		set_x(x);
 		set_y(y);
 	}
@@ -44,7 +46,7 @@ public:
 		return y;
 	}
 
-	string to_string() const
+	virtual string to_string() const
 	{
 		return "Punkt: x=" + std::to_string(x) + ", x=" + std::to_string(y);
 	}

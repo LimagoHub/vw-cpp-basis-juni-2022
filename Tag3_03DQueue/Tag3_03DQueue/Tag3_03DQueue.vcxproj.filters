@@ -15,21 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tag1_03Geometrie.cpp">
+    <ClCompile Include="Tag3_03DQueue.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Punkt.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Kreis.cpp">
+    <ClCompile Include="Schwein.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Punkt.h">
+    <ClInclude Include="Liste.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Kreis.h">
+    <ClInclude Include="ListeClient.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Schwein.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_list_impl.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
