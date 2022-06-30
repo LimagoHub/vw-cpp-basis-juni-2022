@@ -36,13 +36,16 @@ public:
 
 	void append(T value) override
 	{
-		shared_ptr<kettenglied<T>> neu{ new kettenglied<T>{value} };
+		//shared_ptr<kettenglied<T>> neu{ new kettenglied<T>{value} };
+
+		auto neu = make_shared<kettenglied<T>>(value);
+		
 		if( is_empty())
 		{
 			start = neu;
 		} else
 		{
-			move_last();
+			this->move_last();
 			akt->nach = neu;
 			neu->vor = akt;
 			
@@ -51,21 +54,43 @@ public:
 	}
 
 
-	bool update(T value) override{ return false; }
+	bool update(T value) override
+	{
+		if(is_empty())
+			return false;
+
+		akt->data = value;
+		return true;
+	}
 
 	bool remove() override { return false; }
 
-	T get() const override { return T{}; }
+	std::optional<T> get() const override
+	{
+		if(is_empty())
+			return std::nullopt;
 
-	void clear() override {}
+		return std::optional<T>{akt->data};
+	}
 
-	bool move_first() override { return false; }
+	
 
-	bool move_last() override { return false; }
+	bool move_previous() override
+	{
+		if(is_begin_of_list())
+			return false;
 
-	bool move_previous() override { return false; }
+		akt = akt->vor.lock();
+		return true;
+	}
 
-	bool move_next() override { return false; }
+	bool move_next() override {
+		if (is_end_of_list())
+			return false;
+
+		akt = akt->nach;
+		return true;
+	}
 
 	bool is_empty() const override
 	{

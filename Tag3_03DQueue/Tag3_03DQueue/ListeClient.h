@@ -22,14 +22,15 @@ class ListeClient
 
 	auto show_current_pig_if_exists()
 	{
-		auto ptr = liste_.get();
-		if (ptr.use_count() == 0)
+		auto optional = liste_.get();
+		if (optional.has_value())
 		{
-			cout << "liste ist leer!" << endl;
+			cout << **optional << endl;
+			
 		}
 		else
 		{
-			cout << ptr->to_string() << endl;
+			cout << "liste ist leer!" << endl;
 		}
 	}
 

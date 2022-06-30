@@ -1,5 +1,5 @@
 #pragma once
-
+#include <optional>
 template<class T>
 class liste
 {
@@ -8,10 +8,26 @@ public:
 	virtual bool update(T value) = 0;
 	virtual bool remove() = 0;
 
-	virtual T get() const = 0; // Ab c++17 bitte mit Optional
-	virtual void clear() = 0;
-	virtual bool move_first() = 0;
-	virtual bool move_last() = 0;
+	virtual std::optional<T> get() const = 0; // Ab c++17 bitte mit Optional
+	virtual void clear()
+	{
+		while (remove());
+	}
+
+	virtual bool move_first() 
+	{
+		if (is_empty())
+			return false;
+		while (move_previous());
+		return true;
+	}
+
+	virtual bool move_last()  {
+		if (is_empty())
+			return false;
+		while (move_next());
+		return true;
+	}
 	virtual bool move_previous() = 0;
 	virtual bool move_next() = 0;
 	virtual bool is_empty() const = 0;
