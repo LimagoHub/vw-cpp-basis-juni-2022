@@ -36,8 +36,6 @@ public:
 
 	auto append(T value) -> void override
 	{
-		//shared_ptr<kettenglied<T>> neu{ new kettenglied<T>{value} };
-
 		auto neu = make_shared<kettenglied<T>>(value);
 		
 		if( is_empty())
@@ -67,10 +65,7 @@ public:
 
 	std::optional<T> get() const override
 	{
-		if(is_empty())
-			return std::nullopt;
-
-		return std::optional<T>{akt->data};
+		return is_empty() ? std::nullopt : std::optional<T>{ akt->data };
 	}
 
 
