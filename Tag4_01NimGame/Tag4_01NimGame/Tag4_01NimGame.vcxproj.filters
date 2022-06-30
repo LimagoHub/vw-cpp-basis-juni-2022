@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien\game">
+      <UniqueIdentifier>{9b20a9ed-81aa-42c9-9270-078428d6f585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\client">
+      <UniqueIdentifier>{010faa22-a467-4da3-a7c8-55769dd7fe2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\game\nim">
+      <UniqueIdentifier>{19c89bb5-d5a1-49c2-82b7-70eb2e4c252f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\game\nim\player">
+      <UniqueIdentifier>{f115206a-9ff4-46b3-b96f-c25015d8b704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\game\player">
+      <UniqueIdentifier>{080136fe-d735-4835-91cd-79d3ea21ff5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\writer">
+      <UniqueIdentifier>{d7a67a2d-0612-4eed-8598-13ee875a8974}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tag4_01NimGame.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Headerdateien\game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClient.h">
+      <Filter>Headerdateien\client</Filter>
+    </ClInclude>
+    <ClInclude Include="NimGameImpl.h">
+      <Filter>Headerdateien\game\nim</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractNimGamePlayer.h">
+      <Filter>Headerdateien\game\nim\player</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanPlayer.h">
+      <Filter>Headerdateien\game\nim\player</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerPlayer.h">
+      <Filter>Headerdateien\game\nim\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Headerdateien\game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractPlayer.h">
+      <Filter>Headerdateien\game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractGame.h">
+      <Filter>Headerdateien\game</Filter>
+    </ClInclude>
+    <ClInclude Include="PigPlayer.h">
+      <Filter>Headerdateien\game\nim\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Writer.h">
+      <Filter>Headerdateien\writer</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleWrite.h">
+      <Filter>Headerdateien\writer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
