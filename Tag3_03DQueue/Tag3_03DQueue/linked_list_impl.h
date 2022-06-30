@@ -34,7 +34,7 @@ public:
 	{
 	}
 
-	void append(T value) override
+	auto append(T value) -> void override
 	{
 		//shared_ptr<kettenglied<T>> neu{ new kettenglied<T>{value} };
 
@@ -54,7 +54,7 @@ public:
 	}
 
 
-	bool update(T value) override
+	auto update(T value) -> bool override
 	{
 		if(is_empty())
 			return false;
@@ -63,7 +63,7 @@ public:
 		return true;
 	}
 
-	bool remove() override { return false; }
+	auto remove() -> bool override { return false; }
 
 	std::optional<T> get() const override
 	{
@@ -73,9 +73,8 @@ public:
 		return std::optional<T>{akt->data};
 	}
 
-	
 
-	bool move_previous() override
+	auto move_previous() -> bool override
 	{
 		if(is_begin_of_list())
 			return false;
@@ -84,7 +83,8 @@ public:
 		return true;
 	}
 
-	bool move_next() override {
+	auto move_next() -> bool override
+	{
 		if (is_end_of_list())
 			return false;
 
@@ -92,15 +92,17 @@ public:
 		return true;
 	}
 
-	bool is_empty() const override
+	auto is_empty() const -> bool override
 	{
 		return start.use_count() == 0;
 	}
-	bool is_begin_of_list() const override
+
+	auto is_begin_of_list() const -> bool override
 	{
 		return start == akt;
 	}
-	bool is_end_of_list() const override
+
+	auto is_end_of_list() const -> bool override
 	{
 		return is_empty() || akt->nach.use_count() == 0;
 	}
